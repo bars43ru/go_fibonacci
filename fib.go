@@ -27,7 +27,7 @@ func main() {
 	}
 	fmt.Println("for 70 loop algorithm", v)
 
-	v2, err := fibonacciCalc(0)
+	v2, err := fibonacciCalc(10000)
 	if err != nil {
 		log.Fatal(err)
 	}
