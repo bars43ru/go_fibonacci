@@ -10,9 +10,20 @@ func TestFibonacci(t *testing.T) {
 		index  = 7
 		result = 13
 	)
-	v, err := fibonacci(index)
+	v, err := fibonacciRecursive(index)
 	if v != result || err != nil {
 		t.Errorf("fibonachi(%d) = %d, %v; want %d, nil", index, err, v, result)
+	}
+}
+
+func TestFibonacci2(t *testing.T) {
+	const (
+		index  = 15
+		result = 610
+	)
+	v, err := fibonacciLoop(index)
+	if v != result || err != nil {
+		t.Errorf("fibonacci_loop(%d) = %d, %v; want %d, nil", index, err, v, result)
 	}
 }
 
